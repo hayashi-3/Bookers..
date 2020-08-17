@@ -1,0 +1,48 @@
+<% if flash[:notice] %>
+  <div class="flash">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+  <p class="youkoso">Books</p>
+  <table>
+  <thead>
+  <tr>
+  	<th width="250">Title</th>
+  	<th width="350">Body</th>
+  <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @books.each do |book| %>
+  <tr>
+  <td>
+  <%= book.title %>
+  </td>
+  <td>
+  <%= book.body %>
+  </td>
+  <td>
+  <%= link_to "show", book_path(book.id) %>
+  <%= link_to "edit", edit_book_path(book.id) %>
+  <%= link_to "destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+  </td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
+
+ <p class="books-form1">New book</p>
+<!-- form_for部分 -->
+<%= form_for(@book) do |f| %>
+
+<p class="books-form2">Title</p>
+ <div class="books-form3"><%= f.text_field :title %>
+ </div>
+
+<p class="books-form2">Body</p>
+ <div class="books-form3"><%= f.text_area :body %>
+ <%= f.submit 'Create Book' %>
+ </div>
+<% end %>
