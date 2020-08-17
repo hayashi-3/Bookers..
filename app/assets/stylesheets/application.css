@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ul {
+  list-style: none;
+}
+
 .youkoso {
   font-family:"verdana", "arial", "helvetica", "sans-serif";
   color:#333333;
@@ -80,18 +84,20 @@ table td {
 .books-form2 {
   font-family:"verdana", "arial", "helvetica", "sans-serif";
   color:#333333;
+  width:90px;
+  height:15px;
   line-height:20px;
   font-size:13px;
-  margin: 5px 0px 5px 30px;
+  margin: 5px 5px 5px 30px;
 }
 
 .books-form3 {
   font-family:"verdana", "arial", "helvetica", "sans-serif";
   color:#333333;
-  width:50px;
-  height:20px;
+  width:158px;
+  height:5px;
   margin-left:30px;
-  margin-bottom:10px;
+  margin-bottom:20px;
 }
 
 .flash {
@@ -132,7 +138,30 @@ table td {
 }
 
 .alert-warning {
- font-family:"verdana", "arial", "helvetica", "sans-serif";
-  color:red;
+  background-color:#DCDCDC;
+  width:500px;
+  height:150px;
+  text-align: center;
+  border: 3px solid red;
+  font-family:"verdana", "arial", "helvetica", "sans-serif";
   font-size:13px;
+  margin-left:30px;
+}
+
+.alert-warning2 {
+  color:white;
+  font-weight: 700;
+  background-color:red;
+  text-align: left;
+  line-height: 30px;
+  width:500px;
+  height:30px;
+  font-family:"verdana", "arial", "helvetica", "sans-serif";
+  font-size:13px;
+  margin-bottom: 40px;
+}
+
+
+.field_with_errors {
+  border: 3px solid red;
 }
