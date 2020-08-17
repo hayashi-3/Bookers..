@@ -130,3 +130,9 @@ table td {
   color:#333333;
   font-size:13px;
 }
+
+.alert-warning {
+ font-family:"verdana", "arial", "helvetica", "sans-serif";
+  color:red;
+  font-size:13px;
+}
