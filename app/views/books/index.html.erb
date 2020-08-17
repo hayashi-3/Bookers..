@@ -36,7 +36,7 @@
  <p class="books-form1">New book</p>
 <!-- form_for部分 -->
 <%= form_for(@book) do |f| %>
-
+<%= render 'layouts/error_messages', model: f.object %>
 <p class="books-form2">Title</p>
  <div class="books-form3"><%= f.text_field :title %>
  </div>
