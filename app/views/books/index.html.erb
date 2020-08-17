@@ -36,13 +36,15 @@
  <p class="books-form1">New book</p>
 <!-- form_for部分 -->
 <%= form_for(@book) do |f| %>
+<% if @book.errors.any? %>
 <%= render 'layouts/error_messages', model: f.object %>
-<p class="books-form2">Title</p>
+<% end %>
+<label class="books-form2">Title</label>
  <div class="books-form3"><%= f.text_field :title %>
  </div>
 
 <p class="books-form2">Body</p>
- <div class="books-form3"><%= f.text_area :body %>
+ <div class="books-form3 area"><%= f.text_area :body %>
  <%= f.submit 'Create Book' %>
  </div>
 <% end %>
